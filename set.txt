@@ -1,0 +1,25 @@
+https://csikosarpad.github.io/auth/?code=AQAskAcfcxOOSTh9JIXp6OnbKVUVTi3phDsOYuFF_mKnsv4Q3CKWcD05bSuXPoKjzn2I5u0bykfbMbGRYXc2vK3lONqqa-6DH1dGRfmty_0bZWlWv5usosOZYtcZhDfHFFIVhu74cmeh7_1rvlJlM8BIyQtdK57eSlgQnhJkYW6paDwtH-_TVdHvHodFRtV5FjC03V78_Qo-qaZaTMbb-0xqi2gX_gFQI3DXoiTDIc21ig#_
+
+curl -X POST \
+  https://api.instagram.com/oauth/access_token \
+  -F client_id=532392704517743 \
+  -F client_secret=59da06443e57e597d699fbe125035207 \
+  -F grant_type=authorization_code \
+  -F redirect_uri=https://csikosarpad.github.io/auth/ \
+  -F code=AQAskAcfcxOOSTh9JIXp6OnbKVUVTi3phDsOYuFF_mKnsv4Q3CKWcD05bSuXPoKjzn2I5u0bykfbMbGRYXc2vK3lONqqa-6DH1dGRfmty_0bZWlWv5usosOZYtcZhDfHFFIVhu74cmeh7_1rvlJlM8BIyQtdK57eSlgQnhJkYW6paDwtH-_TVdHvHodFRtV5FjC03V78_Qo-qaZaTMbb-0xqi2gX_gFQI3DXoiTDIc21ig
+  
+  
+  {"access_token": "IGQVJVMGU1QTdYYVRaT2VaNlFQcU5BcmlxNmVDVms4alIyMmczWldyTmJ5OXRZAU3BNdnY2SEl2QmZAvRTdtM2pISWU5eXpWQU9MRmRIQ1h4X0Q0SXNHc2ZAfYldKcHNzRGpmcHlROHhiM0VMMF9DRGRrZAHJ5SDV3NGZAGUXJn", "user_id": 17841401069862878}
+  
+  
+  curl -X GET \
+  'https://graph.instagram.com/17841401069862878?fields=id,username&access_token=IGQVJVMGU1QTdYYVRaT2VaNlFQcU5BcmlxNmVDVms4alIyMmczWldyTmJ5OXRZAU3BNdnY2SEl2QmZAvRTdtM2pISWU5eXpWQU9MRmRIQ1h4X0Q0SXNHc2ZAfYldKcHNzRGpmcHlROHhiM0VMMF9DRGRrZAHJ5SDV3NGZAGUXJn'
+  
+  
+  {"id":"4163443100431163","username":"csikosarpad"}
+  
+  
+  https://api.instagram.com/oauth/authorize?client_id=532392704517743&redirect_uri=https://csikosarpad.github.io/auth/&scope=user_profile,user_media&response_type=code&state={state}
+  
+  
+  AQCxdVJ8m02b_qktJW7H835jtje_vCTqJKQ8_eIEdPgFD_eq7rd1qazXa_KlULUe_EMlbp88OSbcxUj5t4n_Bg3Qjt3XBRiRorjZkj21T0hnLImIQbK3632EG4nS8QHzR65UmZa0_iiGUqQkQ6v-UyXFYWrAJmyPghuxET6SccjXDfggniHJOuqJj970mlD_B23K3y5qXHTtTXQ6cUd6x3S9-eO7J_KVgfSzRrKg_1llzg&state=%7Bstate%7D
