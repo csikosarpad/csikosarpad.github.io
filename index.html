@@ -5,10 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Árpád Csikós – UI Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    plugins: [daisyui],
+    daisyui: {
+      themes: ["light", "dark", "cupcake", "corporate", "business"]
+    }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-
+<label class="swap swap-rotate">
+  <input type="checkbox" onclick="document.documentElement.dataset.theme = this.checked ? 'dark' : 'light'">
+  <svg class="swap-on fill-current w-10 h-10" ...>🌙</svg>
+  <svg class="swap-off fill-current w-10 h-10" ...>☀️</svg>
+</label>
   <!-- HEADER -->
   <header class="max-w-4xl mx-auto py-16 px-6">
     <h1 class="text-4xl font-bold">Árpád Csikós</h1>
