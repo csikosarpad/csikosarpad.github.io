@@ -4,30 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Árpád Csikós – UI Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind CDN -->
   <script>
-  tailwind.config = {
-    plugins: [daisyui],
-    daisyui: {
-      themes: ["light", "dark", "cupcake", "corporate", "business"]
+    tailwind = {
+      config: {
+        darkMode: 'class'
+      }
     }
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.js"></script>
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Flowbite (opcionális, maradhat) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-<label class="swap swap-rotate">
-  <input type="checkbox" onclick="document.documentElement.dataset.theme = this.checked ? 'dark' : 'light'">
-  <svg class="swap-on fill-current w-10 h-10" ...>🌙</svg>
-  <svg class="swap-off fill-current w-10 h-10" ...>☀️</svg>
-</label>
+<!-- Tailwind natív dark mode -->
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- DARK MODE TOGGLE -->
+  <div class="max-w-4xl mx-auto px-6 pt-6 flex justify-end">
+    <button 
+      onclick="document.documentElement.classList.toggle('dark')" 
+      class="p-2 rounded border border-gray-300 dark:border-gray-700"
+      aria-label="Toggle dark mode"
+    >
+      🌙 / ☀️
+    </button>
+  </div>
+
   <!-- HEADER -->
   <header class="max-w-4xl mx-auto py-16 px-6">
     <h1 class="text-4xl font-bold">Árpád Csikós</h1>
-    <p class="text-xl mt-2 text-gray-600">UI Developer • React • TypeScript • CSS/Sass</p>
+    <p class="text-xl mt-2 text-gray-600 dark:text-gray-300">UI Developer • React • TypeScript • CSS/Sass</p>
 
-    <div class="mt-4 flex flex-wrap gap-4 text-blue-600">
+    <div class="mt-4 flex flex-wrap gap-4 text-blue-600 dark:text-blue-400">
       <a href="mailto:arpad.csikos@gmail.com">Email</a>
       <a href="https://github.com/csikosarpad">GitHub</a>
       <a href="https://www.linkedin.com/in/...">LinkedIn</a>
@@ -35,12 +47,12 @@
     </div>
   </header>
 
-  <hr class="border-gray-300">
+  <hr class="border-gray-300 dark:border-gray-700">
 
   <!-- ABOUT -->
   <section class="max-w-4xl mx-auto py-12 px-6">
     <h2 class="text-2xl font-semibold mb-4">About me</h2>
-    <p class="leading-relaxed text-gray-700">
+    <p class="leading-relaxed text-gray-700 dark:text-gray-300">
       Web UI developer with over 15 years of experience, passionate about creating intuitive,
       user-friendly websites and applications. Proficient in HTML, CSS (SASS), JavaScript and React.
       Open to new technologies, especially AI, data processing and visualisation.
@@ -55,7 +67,7 @@
 
       <div>
         <h3 class="font-bold mb-2">Frontend</h3>
-        <ul class="list-disc ml-6 text-gray-700">
+        <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300">
           <li>React.js</li>
           <li>JavaScript / Ecmascript</li>
           <li>TypeScript</li>
@@ -66,7 +78,7 @@
 
       <div>
         <h3 class="font-bold mb-2">Backend / Tools</h3>
-        <ul class="list-disc ml-6 text-gray-700">
+        <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300">
           <li>Node.js</li>
           <li>GitHub flow, Gitflow</li>
           <li>Code review</li>
@@ -76,7 +88,7 @@
 
       <div>
         <h3 class="font-bold mb-2">Methodologies</h3>
-        <ul class="list-disc ml-6 text-gray-700">
+        <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300">
           <li>Scrum</li>
           <li>Estimation & work planning</li>
           <li>Clean Code</li>
@@ -86,7 +98,7 @@
 
       <div>
         <h3 class="font-bold mb-2">Other</h3>
-        <ul class="list-disc ml-6 text-gray-700">
+        <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300">
           <li>UX design basics</li>
           <li>Unit testing</li>
           <li>Jira</li>
@@ -103,17 +115,17 @@
     <h3 class="font-bold text-xl mt-6">Experience</h3>
 
     <div class="mt-4">
-  <h4 class="font-semibold">Senior Frontend Developer — Siemens Mobility (2024–Present)</h4>
-  <ul class="list-disc ml-6 text-gray-700 mt-2">
-    <li>Developing React-based UI and module components</li>
-    <li>Implementing interfaces based on Figma designs</li>
-    <li>Collaborating closely with frontend and backend engineers</li>
-  </ul>
-</div>
-    
+      <h4 class="font-semibold">Senior Frontend Developer — Siemens Mobility (2024–Present)</h4>
+      <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 mt-2">
+        <li>Developing React-based UI and module components</li>
+        <li>Implementing interfaces based on Figma designs</li>
+        <li>Collaborating closely with frontend and backend engineers</li>
+      </ul>
+    </div>
+
     <div class="mt-6">
       <h4 class="font-semibold">Web UI Developer — EPAM (2016–2023)</h4>
-      <ul class="list-disc ml-6 text-gray-700 mt-2">
+      <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 mt-2">
         <li>Design documentation, style guides, wireframes maintenance</li>
         <li>Enterprise development (including AWS desktop)</li>
         <li>Collaboration with product managers and stakeholders</li>
@@ -123,7 +135,7 @@
 
     <div class="mt-6">
       <h4 class="font-semibold">Web UI Developer — Shiwaforce.com (2014–2015)</h4>
-      <ul class="list-disc ml-6 text-gray-700 mt-2">
+      <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 mt-2">
         <li>Development in XML/XSLT based framework</li>
         <li>HTML and UI implementation based on design plans</li>
         <li>Local and remote support</li>
@@ -132,7 +144,7 @@
 
     <div class="mt-6">
       <h4 class="font-semibold">Web UI Developer — Netpositive (2012–2014)</h4>
-      <ul class="list-disc ml-6 text-gray-700 mt-2">
+      <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 mt-2">
         <li>HTML5, CSS3, JavaScript, jQuery development</li>
         <li>UI component creation</li>
       </ul>
@@ -140,21 +152,21 @@
 
     <div class="mt-6">
       <h4 class="font-semibold">Front-end Developer — Ustream (2010–2011)</h4>
-      <ul class="list-disc ml-6 text-gray-700 mt-2">
+      <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 mt-2">
         <li>Front-end implementation of the website</li>
       </ul>
     </div>
 
     <div class="mt-6">
       <h4 class="font-semibold">Front-end Developer — Isobar (2008–2010)</h4>
-      <ul class="list-disc ml-6 text-gray-700 mt-2">
+      <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 mt-2">
         <li>Front-end implementation based on Adobe PSD designs</li>
       </ul>
     </div>
 
   </section>
 
-  <footer class="max-w-4xl mx-auto py-10 px-6 text-sm text-gray-500">
+  <footer class="max-w-4xl mx-auto py-10 px-6 text-sm text-gray-500 dark:text-gray-400">
     © 2026 Árpád Csikós
   </footer>
 
