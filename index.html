@@ -18,77 +18,50 @@
   <!-- Flowbite (opcionális, maradhat) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+  
 </head>
 
 <!-- Tailwind natív dark mode -->
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
-
-  <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 border-b">
-  <div class="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4">
-
-    <!-- LOGO / NAME -->
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-        Árpád Csikós
-      </span>
-    </a>
-
-    <!-- MOBILE MENU BUTTON -->
-    <button data-collapse-toggle="navbar-default" type="button" 
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 
-             rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700" 
-      aria-controls="navbar-default" aria-expanded="false">
-      <span class="sr-only">Open main menu</span>
-      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M1 1h15M1 7h15M1 13h15" />
-      </svg>
-    </button>
-
-    <!-- MENU ITEMS -->
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg 
-                 bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white 
-                 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-
-        <li>
-          <a href="#about" class="block py-2 px-3 text-gray-900 rounded 
-             hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 
-             dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-            About
-          </a>
-        </li>
-
-        <li>
-          <a href="#skills" class="block py-2 px-3 text-gray-900 rounded 
-             hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 
-             dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-            Skills
-          </a>
-        </li>
-
-        <li>
-          <a href="#cv" class="block py-2 px-3 text-gray-900 rounded 
-             hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 
-             dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-            CV
-          </a>
-        </li>
-
-        <li>
-          <a href="mailto:arpad.csikos@gmail.com" class="block py-2 px-3 text-gray-900 rounded 
-             hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 
-             dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-            Contact
-          </a>
-        </li>
-
-      </ul>
-    </div>
-  </div>
-</nav>
+  
   <!-- DARK MODE TOGGLE -->
-  <div class="max-w-4xl mx-auto px-6 pt-6 flex justify-end">
+
+<div class="max-w-4xl mx-auto px-6 pt-6 flex justify-end">
+  <button 
+    id="theme-toggle"
+    onclick="document.documentElement.classList.toggle('dark')"
+    class="p-2 rounded-full border border-gray-300 dark:border-gray-700 
+           transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-800"
+    aria-label="Toggle dark mode"
+  >
+    <!-- Sun icon -->
+    <svg id="sun-icon" class="w-6 h-6 text-yellow-500 dark:hidden transition-transform duration-500" 
+         fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 15a5 5 0 100-10 5 5 0 000 10z"/>
+      <path fill-rule="evenodd" 
+            d="M10 1a1 1 0 011 1v1a1 1 0 11-2 0V2a1 1 0 011-1zm0 14a1 1 0 011 1v1a1 1 0 
+               11-2 0v-1a1 1 0 011-1zm9-5a1 1 0 01-1 1h-1a1 1 0 
+               110-2h1a1 1 0 011 1zM4 10a1 1 0 01-1 1H2a1 1 0 
+               110-2h1a1 1 0 011 1zm11.657-6.657a1 1 0 
+               010 1.414L15.414 6.0a1 1 0 11-1.414-1.414l1.243-1.243a1 1 0 
+               011.414 0zM6.0 15.414a1 1 0 01-1.414 0L3.343 14.17a1 1 0 
+               111.414-1.414L6.0 14.0a1 1 0 010 1.414zm9.657 1.243a1 1 0 
+               01-1.414 0L14.0 15.414a1 1 0 111.414-1.414l1.243 1.243a1 1 0 
+               010 1.414zM6.0 4.586a1 1 0 00-1.414 0L3.343 5.83A1 1 0 
+               104.757 7.243L6.0 6.0A1 1 0 006.0 4.586z" 
+            clip-rule="evenodd"/>
+    </svg>
+
+    <!-- Moon icon -->
+    <svg id="moon-icon" class="w-6 h-6 text-gray-200 hidden dark:block transition-transform duration-500" 
+         fill="currentColor" viewBox="0 0 20 20">
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+    </svg>
+  </button>
+</div>
+  
+  <!--div class="max-w-4xl mx-auto px-6 pt-6 flex justify-end">
     <button 
       onclick="document.documentElement.classList.toggle('dark')" 
       class="p-2 rounded border border-gray-300 dark:border-gray-700"
@@ -96,7 +69,7 @@
     >
       🌙 / ☀️
     </button>
-  </div>
+</div-->
 
   <!-- HEADER -->
   <header class="max-w-4xl mx-auto py-16 px-6">
@@ -234,5 +207,12 @@
     © 2026 Árpád Csikós
   </footer>
 
+  <script>
+  const btn = document.getElementById('theme-toggle');
+  btn.addEventListener('click', () => {
+    btn.classList.add('rotate-180');
+    setTimeout(() => btn.classList.remove('rotate-180'), 300);
+  });
+</script>  
 </body>
 </html>
